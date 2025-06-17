@@ -1,0 +1,10 @@
+<h2>Product List Example (Signals + RxJS)</h2>
+
+<p>Total de produtos: {{ productCount() }}</p>
+
+<ul>
+  <li *ngFor="let product of products()">{{ product }}</li>
+</ul>
+
+<input [(ngModel)]="newProduct" placeholder="Novo produto" />
+<button (click)="add()">Adicionar Produto</button>

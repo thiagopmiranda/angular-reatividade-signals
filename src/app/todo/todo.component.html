@@ -1,0 +1,23 @@
+<h2>Todo List com Signals + Http + RxJS</h2>
+
+<button (click)="loadTodos()">Carregar Todos (HTTP)</button>
+
+<div *ngIf="todoService.isLoading()">Carregando...</div>
+<div *ngIf="todoService.getError()">{{ todoService.getError() }}</div>
+
+<ul>
+  <li *ngFor="let todo of todoService.getTodos()">
+    <input type="checkbox" [checked]="todo.done" (change)="toggle(todo.id)" />
+    {{ todo.title }}
+    <button (click)="remove(todo.id)">Remover</button>
+  </li>
+</ul>
+
+<input
+  [value]="newTodo()"
+  (input)="newTodo.set($any($event.target).value)"
+  placeholder="Nova tarefa"
+/>
+<button (click)="add()">Adicionar</button>
+
+<p>Total: {{ todoService.total() }} | Concluídas: {{ todoService.completed() }}</p>

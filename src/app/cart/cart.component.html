@@ -1,0 +1,6 @@
+<h2>Cart Example (Signals)</h2>
+
+<p>Items in cart: {{ itemCount() }}</p>
+
+<button (click)="add()">Add Item</button>
+<button (click)="remove()" [disabled]="!hasItems()">Remove Item</button>
