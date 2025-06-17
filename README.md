@@ -1,27 +1,68 @@
-# AngularSignalsDemo
+📌 Angular Signals - Reatividade Moderna com Standalone e RxJS
+Este projeto é uma demonstração prática dos novos conceitos de reatividade no Angular, utilizando:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+✅ Angular Signals
+✅ Standalone Components
+✅ RxJS + HttpClient
+✅ Lazy Loading de Componentes
+✅ Http Interceptor Fake API (Mock)
+✅ Control Flow Angular 17 (@if, @for)
 
-## Development server
+🛠️ Tecnologias e Versão Angular
+Angular 17.x
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+TypeScript
 
-## Code scaffolding
+RxJS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Standalone APIs
 
-## Build
+Signals API
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+HttpClient
 
-## Running unit tests
+Angular Router com lazy-loading
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+📂 Estrutura do Projeto
+/app.config.ts → Configuração de router, HttpClient e interceptor
 
-## Running end-to-end tests
+/app.routes.ts → Rotas com lazy loading usando loadComponent
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+/todo/ → Exemplo de Signals + RxJS + HttpClient
 
-## Further help
+/product/ → Exemplo de Signals locais + Update State
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+/cart/ → Componente simples standalone
+
+🚀 Executando o projeto
+bash
+Copiar
+Editar
+npm install
+ng serve
+🧪 Testando a API Fake
+O interceptor simula a API /api/todos com um pequeno delay.
+A lista de todos é carregada via HttpClient + RxJS + Signals.
+
+🎯 Conceitos demonstrados
+State Management com Signals
+
+Efeitos Reativos com effect()
+
+Derivações Computadas com computed()
+
+Lazy Loading com loadComponent()
+
+Standalone Components sem módulos
+
+Interceptação de requisições HTTP simulando backend
+
+💡 Próximos Passos (opcional para expandir o projeto)
+Criar testes unitários com Jasmine/Karma ou Jest
+
+Adicionar backend real para persistência
+
+Implementar Signals no Router e Forms
+
+👨‍💻 Autor
+Thiago Miranda
