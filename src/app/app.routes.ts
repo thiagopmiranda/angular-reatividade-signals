@@ -17,5 +17,6 @@ export const routes: Routes = [
     {
         path: 'todos',
         loadComponent: () => import('./todo/todo.component').then(m => m.TodoComponent)
-    }
+    },
+    
 ];

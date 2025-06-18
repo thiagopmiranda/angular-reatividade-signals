@@ -1,13 +1,14 @@
 import { Component, WritableSignal } from '@angular/core';
 import { ProductService } from './product.service';
 import { computed, effect, signal } from '@angular/core';
-import { AsyncPipe, NgFor } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ProductStatisticsComponent } from './product-statistics/product-statistics.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [NgFor , FormsModule],
+  imports: [NgFor , FormsModule, ProductStatisticsComponent],
   templateUrl: './product.component.html',
 })
 export class ProductComponent {

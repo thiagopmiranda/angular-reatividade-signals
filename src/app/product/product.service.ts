@@ -11,4 +11,8 @@ export class ProductService {
   addProduct(name: string) {
     this.products.update(list => [...list, name]);
   }
+  
+  removeProduct(productName: string): void {
+    this.products.update(product => product.filter(p => p !== productName));
+  }
 }

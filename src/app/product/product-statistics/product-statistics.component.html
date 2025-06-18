@@ -1,0 +1,17 @@
+<div class="statistics-card">
+  <h3>Estatísticas de Produtos</h3>
+  <p>Total de produtos em estoque: <strong>{{ totalProducts() }}</strong></p>
+
+  <h4>Lista Completa de Produtos:</h4>
+  <ul *ngIf="totalProducts() > 0; else noProducts">
+    <li *ngFor="let product of allProducts()">{{ product }}</li>
+  </ul>
+  <ng-template #noProducts>
+    <p>Nenhum produto em estoque.</p>
+  </ng-template>
+
+  <div class="actions">
+    <button (click)="addProductExternally()">Adicionar Produto Aleatório</button>
+    <button (click)="removeLastProduct()" [disabled]="totalProducts() === 0">Remover Último Produto</button>
+  </div>
+</div>
